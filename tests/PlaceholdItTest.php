@@ -1,6 +1,6 @@
 <?php
 
-require_once 'src/PlaceholdIt.php';
+require_once '../src/PlaceholdIt.php';
 
 class PlaceholdIt_Test extends PHPUnit_Framework_TestCase
 {
