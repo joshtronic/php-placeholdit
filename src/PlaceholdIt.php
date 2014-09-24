@@ -41,22 +41,22 @@ class PlaceholdIt
         // Checks if the format is valid
         if (!in_array($format, array('gif', 'jpeg', 'jpg', 'png')))
         {
-            throw new Exception('Invalid format. Valid formats: gif, jpeg, jpg and png.');
+            throw new \Exception('Invalid format. Valid formats: gif, jpeg, jpg and png.');
         }
         // Checks if foreground is present without background
         elseif ($foreground && !$background)
         {
-            throw new Exception('You must specify a background color if you wish to specify a foreground color.');
+            throw new \Exception('You must specify a background color if you wish to specify a foreground color.');
         }
         // Checks the background color's length
         elseif ($background && strlen($background) < 6)
         {
-            throw new Exception('The background color must be a 6 character hex code.');
+            throw new \Exception('The background color must be a 6 character hex code.');
         }
         // Checks the foreground color's length
         elseif ($foreground && strlen($foreground) < 6)
         {
-            throw new Exception('The foreground color must be a 6 character hex code.');
+            throw new \Exception('The foreground color must be a 6 character hex code.');
         }
 
         $url = 'http://placehold.it/' . $width;
